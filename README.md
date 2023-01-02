@@ -1,6 +1,7 @@
 # Template of Mathias Sablé-Meyer's Ph.D. Manuscript
 
 > **Warning**
+>
 > The scripts here are provided `as is`. They workd for me but are far from
 > polished. Expect to have to dig into some of the scripts, templates, etc.
 
@@ -34,6 +35,8 @@ tools (`make`, `sed`, `pdftk`).
 A note on references : I wrote a small script to clean up references formatted by zotero in a `.docx` file, left as `fix_ref.py`: using this one can modify the makefile to include:
 
 ```makefile
+# [...]
+PhD.pdf: $(SOURCES) ./media/figure-1.pdf headers.yaml
 	python fix_ref.py $(SOURCES) tmp.docx
 	pandoc tmp.docx --from docx+citations --citeproc -o bib.bib
 	pandoc tmp.docx \
