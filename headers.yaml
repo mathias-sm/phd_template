@@ -1,0 +1,17 @@
+---
+title: "PhD thesis"
+author: "Author"
+documentclass: book
+numbersections: true
+toc: true
+toc-depth: 2
+fontsize: 12pt
+geometry: "a4paper, inner=4.85cm, outer=3.7cm"
+toc-title: "Table of Contents"
+header-includes:
+  - \usepackage{graphicx}
+  - \usepackage{wrapfig}
+  - \setmainfont{Cambria}
+  - \setsansfont{Calibri}
+  - \setmonofont{Consolas}
+---
