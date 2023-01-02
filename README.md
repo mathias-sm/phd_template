@@ -3,9 +3,9 @@
 > **Warning**
 >
 > The scripts here are provided `as is`. They worked for me but are far from
-> polished. Things are brittle and may fail on ill-formed input, except what
-> "well-formed" means is at best loosely specified below. Expect to have to dig
-> into some of the scripts, templates, etc.
+> polished. Things are brittle and may fail on ill-formed input — and what
+> "well-formed" means here is at best loosely specified below.  
+> Expect to have to dig into some of the scripts, templates, etc.
 
 This is a collection of scripts I wrote in order to satisfy following
 constraints:
