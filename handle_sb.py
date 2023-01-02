@@ -7,13 +7,13 @@ def to_str(x):
     else:
         return x.text
 
-figure = re.compile("#ABSTRACT#")
+abstract = re.compile("#ABSTRACT#")
 
-def handle_figures(elem, doc):
+def handle_abstract(elem, doc):
     if isinstance(elem, Para):
         if len(elem.content) > 0 and isinstance(elem.content[0], Str):
             txt = elem.content[0].text
-            z = figure.match(txt)
+            z = abstract.match(txt)
             if z is not None:
                 para = "".join([to_str(x) for x in [*elem.content[2:]]])
                 raw_latex = r"\begin{tcolorbox}[width=\textwidth,colback=\chapterbackcolor!20,title={\sffamily\textbf{\textcolor{white}{Abstract}}},colbacktitle=\chapterbackcolor]"
@@ -22,7 +22,7 @@ def handle_figures(elem, doc):
                 return RawBlock(raw_latex, format="latex")
 
 def main(doc=None):
-    return run_filter(handle_figures, doc=doc)
+    return run_filter(handle_abstract, doc=doc)
 
 if __name__ == "__main__":
     main()
